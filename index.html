@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Todo App</h1>
+      <p class="subtitle">Add, edit, complete and manage your tasks — saved locally.</p>
+    </header>
+
+    <section class="todo-card">
+      <form id="todo-form" class="todo-form" autocomplete="off">
+        <input id="todo-input" type="text" placeholder="Add a new task..." required />
+        <input id="todo-date" type="date" />
+        <button type="submit" class="btn add-btn">Add</button>
+      </form>
+
+      <div class="controls">
+        <div class="filters">
+          <button data-filter="all" class="filter-btn active">All</button>
+          <button data-filter="active" class="filter-btn">Active</button>
+          <button data-filter="completed" class="filter-btn">Completed</button>
+        </div>
+        <div class="actions">
+          <span id="count">0 tasks</span>
+          <button id="clear-completed" class="btn small">Clear completed</button>
+        </div>
+      </div>
+
+      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+      <footer class="footer">
+        <small>Built with ❤️ — Local storage persists your todos</small>
+      </footer>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
